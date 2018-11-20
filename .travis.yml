@@ -1,0 +1,18 @@
+language: go
+
+go:
+  - "1.11.1"
+
+env:
+  global:
+    - GOARCH=amd64
+    - GO_FOR_RELEASE=1.11
+    - IMAGE_NAME=tsuru/api
+
+jobs:
+  fast_finish: true
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
