@@ -1,13 +1,16 @@
 language: go
 
 go:
-  - "1.11.1"
+  - "1.11.x"
 
 env:
   global:
     - GOARCH=amd64
     - GO_FOR_RELEASE=1.11
     - IMAGE_NAME=tsuru/api
+    - GO111MODULE=on
+
+install: true
 
 jobs:
   fast_finish: true
